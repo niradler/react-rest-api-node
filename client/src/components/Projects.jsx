@@ -17,99 +17,110 @@ class Projects extends React.Component {
   render() {
     return (
       <div>
+        <h1 className="title is-2">Projects</h1>
         <form onSubmit={this.handleFormSubmit} className="field">
 
-          <div className="field">
-            <label className="label">Author:</label>
-            <div className="control">
-              <input
-                type="text"
-                name="author"
-                className="input"
-                value={this.author}
-                onChange={this.handleInputChange}
-              />
+          <div className="columns">
+
+            <div className="field column ">
+              <label className="label">Author:</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="author"
+                  className="input"
+                  value={this.author}
+                  onChange={this.handleInputChange}
+                />
               </div>
             </div>
-        
-          <div className="field">
-            <label className="label">AuthorLink:</label>
-            <div className="control">
-              <input
-                type="text"
-                name="authorLink"
-                className="input"
-                value={this.authorLink}
-                onChange={this.handleInputChange}
-              />
+
+            <div className="field column ">
+              <label className="label">AuthorLink:</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="authorLink"
+                  className="input"
+                  value={this.authorLink}
+                  onChange={this.handleInputChange}
+                />
+              </div>
             </div>
+
+            <div className="field column ">
+              <label className="label">DemoLink:</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="demoLink"
+                  className="input"
+                  value={this.demoLink}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </div>
+
+</div>
+          <div className="columns">
+
+            <div className="field column ">
+              <label className="label">Description:</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="description"
+                  className="input"
+                  value={this.description}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </div>
+
+            <div className="field column is-one-quarter">
+              <label className="label">githubLink:</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="githubLink"
+                  className="input"
+                  value={this.githubLink}
+                  onChange={this.handleInputChange}
+                />
+              </div>
+            </div>
+
           </div>
 
-          <div className="field">
-            <label className="label">DemoLink:</label>
-            <div className="control">
-              <input
-                type="text"
-                name="demoLink"
-                className="input"
-                value={this.demoLink}
-                onChange={this.handleInputChange}
-              />
+          <div className="columns">
+            <div className="field column ">
+              <label className="label">project:</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="project"
+                  className="input"
+                  value={this.project}
+                  onChange={this.handleInputChange}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="field">
-            <label className="label">Description:</label>
-            <div className="control">
-              <input
-                type="text"
-                name="description"
-                className="input"
-                value={this.description}
-                onChange={this.handleInputChange}
-              />
+            <div className="field column ">
+              <label className="label">technologies:</label>
+              <div className="control">
+                <input
+                  type="text"
+                  name="technologies"
+                  className="input"
+                  value={this.technologies}
+                  onChange={this.handleInputChange}
+                />
+              </div>
             </div>
-          </div>
 
-          <div className="field">
-            <label className="label">githubLink:</label>
-            <div className="control">
-              <input
-                type="text"
-                name="githubLink"
-                className="input"
-                value={this.githubLink}
-                onChange={this.handleInputChange}
-              />
-            </div>
           </div>
-
-          <div className="field">
-            <label className="label">project:</label>
-            <div className="control">
-              <input
-                type="text"
-                name="project"
-                className="input"
-                value={this.project}
-                onChange={this.handleInputChange}
-              />
-            </div>
-          </div>
-
-          <div className="field">
-            <label className="label">technologies:</label>
-            <div className="control">
-              <input
-                type="text"
-                name="technologies"
-                className="input"
-                value={this.technologies}
-                onChange={this.handleInputChange}
-              />
-            </div>
-          </div>
-  
+          
           <button type="submit" className = "button">Add</button>
         </form>
         <hr />

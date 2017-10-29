@@ -3,32 +3,44 @@ import { observer } from "mobx-react";
 
 const Project = observer(({ project,store }) => 
   <div className="box">
-<ul>
-  <li>
-    {project.author}
-    </li>
-    <li>
-    {project.authorLink}
-    </li>
-    <li>
-    {project.demoLink}
-    </li>
-    <li>
-    {project.description}
-    </li>
-    <li>
-    {project.githubLink}
-    </li>
-    <li>
-    {project.project}
-    </li>
-    <li>
-    {project.technologies}
-    </li>
-    <li>
-    {project.status}
-  </li>
-  </ul>
+
+    <div className="columns">
+      <div className="column">
+        <strong> author: </strong>{project.author}
+      </div>
+   
+    </div>
+
+    <div className="columns">
+      <div className="column">
+        <strong> demoLink: </strong>{project.demoLink}
+      </div>
+      <div className="column">
+        <strong> githubLink: </strong>{project.githubLink}
+      </div>
+      <div className="column">
+        <strong> authorLink: </strong>{project.authorLink}
+      </div>
+    </div>
+
+    <div className="columns">
+      <div className="column">
+        <strong> description: </strong>{project.description}
+      </div>
+    </div>
+
+    <div className="columns">
+      <div className="column">
+        <strong> project: </strong> {project.project}
+      </div>
+      <div className="column">
+        <strong> technologies: </strong>{project.technologies}
+      </div>
+      <div className="column">
+        <strong> status: </strong>{project.status}
+      </div>
+    </div>
+
 </div>
 );
 
