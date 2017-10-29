@@ -17,56 +17,98 @@ class Projects extends React.Component {
   render() {
     return (
       <div>
-        <form onSubmit={this.handleFormSubmit}>
-        author:
-          <input
-            type="text"
-            name="author"
-            value={this.author}
-            onChange={this.handleInputChange}
-          />
-          authorLink:
-          <input
-          type="text"
-          name="authorLink"
-          value={this.authorLink}
-          onChange={this.handleInputChange}
-        />
-        demoLink:
-        <input
-        type="text"
-        name="demoLink"
-        value={this.demoLink}
-        onChange={this.handleInputChange}
-      />
-      description:
-        <input
-        type="text"
-        name="description"
-        value={this.description}
-        onChange={this.handleInputChange}
-      />
-      githubLink:
-      <input
-      type="text"
-      name="githubLink"
-      value={this.githubLink}
-      onChange={this.handleInputChange}
-    />
-    project:
-      <input
-      type="text"
-      name="project"
-      value={this.project}
-      onChange={this.handleInputChange}
-    />
-    technologies:
-      <input
-      type="text"
-      name="technologies"
-      value={this.technologies}
-      onChange={this.handleInputChange}
-    />
+        <form onSubmit={this.handleFormSubmit} className="field">
+
+          <div className="field">
+            <label className="label">Author:</label>
+            <div className="control">
+              <input
+                type="text"
+                name="author"
+                className="input"
+                value={this.author}
+                onChange={this.handleInputChange}
+              />
+              </div>
+            </div>
+        
+          <div className="field">
+            <label className="label">AuthorLink:</label>
+            <div className="control">
+              <input
+                type="text"
+                name="authorLink"
+                className="input"
+                value={this.authorLink}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">DemoLink:</label>
+            <div className="control">
+              <input
+                type="text"
+                name="demoLink"
+                className="input"
+                value={this.demoLink}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">Description:</label>
+            <div className="control">
+              <input
+                type="text"
+                name="description"
+                className="input"
+                value={this.description}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">githubLink:</label>
+            <div className="control">
+              <input
+                type="text"
+                name="githubLink"
+                className="input"
+                value={this.githubLink}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">project:</label>
+            <div className="control">
+              <input
+                type="text"
+                name="project"
+                className="input"
+                value={this.project}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
+
+          <div className="field">
+            <label className="label">technologies:</label>
+            <div className="control">
+              <input
+                type="text"
+                name="technologies"
+                className="input"
+                value={this.technologies}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          </div>
   
           <button type="submit" className = "button">Add</button>
         </form>

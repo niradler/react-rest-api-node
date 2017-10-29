@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { observer } from "mobx-react";
 
 const Project = observer(({ project,store }) => 
+  <div className="box">
 <ul>
   <li>
     {project.author}
@@ -28,6 +29,7 @@ const Project = observer(({ project,store }) =>
     {project.status}
   </li>
   </ul>
+</div>
 );
 
 export default Project;
