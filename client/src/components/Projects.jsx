@@ -124,14 +124,15 @@ class Projects extends React.Component {
           <button type="submit" className = "button">Add</button>
         </form>
         <hr />
-        
-          {this.props.store.projects.map(p => (
-            <div key={p.id%2}>
-            <button type = "button" className = "button" onClick={this.delProject.bind(this,p.id)}> remove </button>
+        <div className="">
+          {
+           this.props.store.projects.map(p => (
+              <div key={(p.id) + Math.random()} className="">
+                <button type="button" className= "button is-pulled-right is-danger" onClick={this.delProject.bind(this,p.id)}> remove </button>
             <Project project={p} key={p.id} store={this.props.store}/>
             </div>
           ))}
-       
+        </div>
 
       </div>
     );
