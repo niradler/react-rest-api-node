@@ -1,7 +1,7 @@
 {
-  "name": "mobx-react-boilerplate",
+  "name": "react-example-project",
   "version": "1.0.0",
-  "description": "Boilerplate for MobX + React project with JSX, ES6 and decorator compilation",
+  "description": "MobX + React example project",
   "scripts": {
     "start": "webpack-dev-server --hot --open",
     "lint": "eslint src"
