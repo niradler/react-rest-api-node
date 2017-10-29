@@ -14,6 +14,11 @@ class Projects extends React.Component {
   @observable project;
   @observable technologies;
   @observable status = false;
+constructor(props){
+  super();
+  props.store.getProjects();
+}
+
   render() {
     return (
       <div>
@@ -127,8 +132,8 @@ class Projects extends React.Component {
         <div className="">
           {
            this.props.store.projects.map(p => (
-              <div key={(p.id) + Math.random()} className="">
-                <button type="button" className= "button is-pulled-right is-danger" onClick={this.delProject.bind(this,p.id)}> remove </button>
+              <div key={(p._id) + Math.random()} className="">
+                <button type="button" className= "button is-pulled-right is-danger" onClick={this.delProject.bind(this,p._id)}> remove </button>
             <Project project={p} key={p.id} store={this.props.store}/>
             </div>
           ))}
