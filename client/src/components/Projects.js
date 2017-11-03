@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import { observable, action } from "mobx";
-import { observer } from "mobx-react";
+import { observer,inject } from "mobx-react";
 
 import Project from "./Project";
 
+@inject ('store')
 @observer
 class Projects extends React.Component {
-  @observable author;
-  @observable authorLink;
-  @observable demoLink;
-  @observable description;
-  @observable githubLink;
-  @observable project;
-  @observable technologies;
-  @observable status = false;
+
 constructor(props){
   super();
+  let author;
+  let authorLink;
+  let demoLink;
+  let description;
+  let githubLink;
+  let project;
+  let technologies;
+  let status = false;
   props.store.getProjects();
 }
 

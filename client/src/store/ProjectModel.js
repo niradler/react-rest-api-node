@@ -1,15 +1,6 @@
-import { observable } from "mobx";
 
-export default class Project {
-    @observable author;
-    @observable authorLink;
-    @observable demoLink;
-    @observable description;
-    @observable githubLink;
-    @observable project;
-    @observable technologies;
-    @observable status = false;
-    @observable id = 0;
+
+ class Project {
 
     constructor(project) {
         this.author = project.author;
@@ -24,4 +15,7 @@ export default class Project {
         this.id = project.id;
         console.log('project', project);
     }
+  
 }
+
+export default Project;

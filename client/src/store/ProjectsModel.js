@@ -1,11 +1,9 @@
-import { observable, computed, action } from "mobx";
+import { observable, action } from "mobx";
 
 import ProjectModel from "./ProjectModel";
 
 export default class ProjectsModel {
     @observable projects = [];
-
-
 
     @action
     getProjects() {

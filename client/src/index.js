@@ -1,22 +1,21 @@
-import React from "react";
-import { render } from "react-dom";
-import DevTools from "mobx-react-devtools";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import './index.css';
+import registerServiceWorker from './registerServiceWorker';
+
+import {Provider} from 'mobx-react';
 
 import Projects from "./components/Projects";
 
-import ProjectsModel from "./models/projects/ProjectsModel";
-import ProjectModel from "./models/projects/ProjectModel";
+import ProjectsModel from "./store/ProjectsModel";
+
 
 const store = new ProjectsModel();
 
-render(
-  <div>
-    <DevTools />
-    <Projects store={store} />
-  </div>,
-  document.getElementById("root")
-);
-
-
-// playing around in the console
-window.store = store;
+const Root = (
+    <Provider store={store}>
+    <Projects />
+    </Provider>
+)
+ReactDOM.render(Root, document.getElementById('root'));
+registerServiceWorker();
